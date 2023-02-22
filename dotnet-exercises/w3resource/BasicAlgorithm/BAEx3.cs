@@ -1,6 +1,7 @@
 using System.Diagnostics.Contracts;
 
 namespace dotnet_exercises.w3resource.BasicAlgorithm;
+
 /*
 Write a C# Sharp program to check two given integers, 
 and return true if one of them is 30 or if their sum is 30.
