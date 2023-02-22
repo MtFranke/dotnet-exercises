@@ -11,7 +11,7 @@ Expected Output:
 5
 12   
 */
-public class Ba_ex1 : IRunner
+public class BAEx1 : IRunner
 {
     public void Run()
     {
