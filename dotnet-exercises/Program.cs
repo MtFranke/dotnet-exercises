@@ -1,4 +1,4 @@
 ﻿using dotnet_exercises.w3resource.basic;
 
-var exercise = new Ex2();
+var exercise = new Ex3();
 exercise.Run();
