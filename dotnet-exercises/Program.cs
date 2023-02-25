@@ -1,6 +1,6 @@
 ﻿using dotnet_exercises.w3resource.basic;
 using dotnet_exercises.w3resource.BasicAlgorithm;
 
-var exercise = new Ex17();
+var exercise = new Ex18();
 exercise.Run();
 
