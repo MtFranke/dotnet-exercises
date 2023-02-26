@@ -1,5 +1,5 @@
 ﻿using dotnet_exercises.w3resource.basic;
 using dotnet_exercises.w3resource.BasicAlgorithm;
 
-var exercise = new Ex27();
+var exercise = new Ex28();
 exercise.Run();
