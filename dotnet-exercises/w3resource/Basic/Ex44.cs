@@ -23,20 +23,13 @@ public class Ex44 : IRunner
 
     private static string DoAlgorithm(string input)
     {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < input.Length; i++)
+        StringBuilder output = new StringBuilder(input.Length / 2);
+        for (int i = 0; i < input.Length; i += 2)
         {
-            if (!IsOdd(i))
-            {
-                sb.Append(input[i].ToString());
-            }
+            output.Append(input[i]);
         }
 
-        return sb.ToString();
-        
-        bool IsOdd(int n) {
-            return Math.Abs(n % 2) == 1;
-        }
+        return output.ToString();
     }
     
 
