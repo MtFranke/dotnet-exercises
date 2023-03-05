@@ -47,26 +47,50 @@ public class ListNode
 
 public class Solution : IRunner
 {
-    // private ListNode n1 = new ListNode(5, new ListNode(6, new ListNode(4, null)));
-    // private ListNode n2 = new ListNode(2, new ListNode(4, new ListNode(3, null)));
+    private ListNode n1 = new ListNode(5, new ListNode(6, new ListNode(4, null)));
+    private ListNode n2 = new ListNode(2, new ListNode(4, new ListNode(3, null)));
+    
     // private ListNode n1 = new ListNode(0, null);
     // private ListNode n2 = new ListNode(1, null);
-    private ListNode n1 = new ListNode(9, null);
-
-    private ListNode n2 = new(1, new
-    (9, new
-    (9, new
-    (9, new
-    (9, new
-    (9, new
-    (9, new
-    (9, new
-    (9, new
-        (9))))))))));
+    
+    // private ListNode n1 = new ListNode(9, null);
+    // private ListNode n2 = new(1, new
+    // (9, new
+    // (9, new
+    // (9, new
+    // (9, new
+    // (9, new
+    // (9, new
+    // (9, new
+    // (9, new
+    //     (9))))))))));
 
     public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
     {
-        return null;
+        ListNode dummyHead = new ListNode(0);
+        int carry = 0;
+        ListNode answer = dummyHead;
+        while (l1 is not null || l2 is not null)
+        {
+            int x = (l1 != null) ? l1.val : 0;
+            int y = (l2 != null) ? l2.val : 0;
+            var sum = carry + x + y;
+            //since value needs to be in range of 0 to 10 we add rest of leftover to next value
+            carry = sum / 10;
+
+            answer.next = new ListNode(sum % 10);
+            answer = answer.next;
+            //go through next ListNode
+            if (l1 is not null) l1 = l1.next;
+            if (l2 is not null) l2 = l2.next;
+            
+        }
+        //add the rest from splitting if it wasn't added to ListNode
+        if (carry > 0) {
+            answer.next = new ListNode(carry);
+        }
+
+        return dummyHead.next;
     }
 
     /// <summary>
