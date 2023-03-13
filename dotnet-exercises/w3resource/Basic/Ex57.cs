@@ -13,17 +13,26 @@ public class Ex57 : IRunner
         Console.WriteLine($"{DoAlgorithm(new [] { 1 , 0, -4, 0, 2})}"); 
     }
 
-    [Pure]
+    /*[Pure]
     private static int DoAlgorithm(int[] arr)
     {
         var maxProduct = arr[0] * arr[1];
         for (var i = 0; i < arr.Length; i++)
         {
-            if(i + 1 >= arr.Length) break;
+            if (i + 1 >= arr.Length) break;
             var product = arr[i] * arr[i + 1];
             maxProduct = Math.Max(product, maxProduct);
         }
 
         return maxProduct;
-    }
+    }*/
+    
+    [Pure]
+    private static int DoAlgorithm(int[] arr)
+        => arr
+            .Take(arr.Length - 1)
+            .Select((value,index) => value * arr[index + 1])
+            .Max();
+
+    
 }
