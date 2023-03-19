@@ -1,23 +1,20 @@
 namespace dotnet_exercises.LeetCode;
 
-public class Solution2 : IRunner
+public class SearchInsertPositionEx : IRunner
 {
     public int SearchInsert(int[] nums, int target)
     {
-        var collection = nums.ToList();
-        var index = collection.IndexOf(target);
-        if (index == -1) return index;
-
-        for (int i = 0; i < nums.Length; i++)
-        {
+        int i = 0;
+        while (i < nums.Length && nums[i] < target) {
+            i++;
         }
-
-        return -1;
+        return i;
 
     }
 
     public void Run()
     {
         SearchInsert(new[]{ 1,3,5,6}, 5);
+        SearchInsert(new[]{ 1,3,5,6}, 2);
     }
 }
