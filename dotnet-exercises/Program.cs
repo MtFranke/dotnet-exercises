@@ -3,6 +3,6 @@ using dotnet_exercises.other;
 using dotnet_exercises.w3resource.Basic;
 using dotnet_exercises.w3resource.BasicAlgorithm;
 
-var exercise = new Ex78();
+var exercise = new Ex79();
 exercise.Run();
 Console.ReadKey();
