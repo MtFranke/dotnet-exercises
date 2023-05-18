@@ -4,7 +4,7 @@ using dotnet_exercises.w3resource.Basic;
 using dotnet_exercises.w3resource.BasicAlgorithm;
 using dotnet_exercises.w3resource.ConditionalStatement;
 
-var exercise = new Ex8();
+var exercise = new Ex9();
 exercise.Run();
 Console.ReadKey();
 
